@@ -12,5 +12,5 @@ migrate = Migrate(app, db)
 
 
 
-from app.api import routes
+from app.api import routes_data, routes_search
 from app import models

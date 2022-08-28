@@ -1,8 +1,8 @@
-"""vendor data table
+"""craeting table
 
-Revision ID: 8b7e2ff0f653
+Revision ID: 500aaef0a7aa
 Revises: 
-Create Date: 2022-08-26 18:32:18.210691
+Create Date: 2022-08-26 20:52:33.925431
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '8b7e2ff0f653'
+revision = '500aaef0a7aa'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -23,7 +23,7 @@ def upgrade():
     sa.Column('name', sa.String(length=128), nullable=False),
     sa.Column('location', sa.String(length=128), nullable=False),
     sa.Column('rating', sa.Integer(), nullable=False),
-    sa.Column('skill', sa.String(length=128), nullable=False),
+    sa.Column('skills', sa.String(length=128), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_vendor_location'), 'vendor', ['location'], unique=False)
